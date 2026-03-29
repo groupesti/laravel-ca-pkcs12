@@ -1,0 +1,37 @@
+{
+    "name": "groupesti/laravel-ca-pkcs12",
+    "description": "PKCS#12 (PFX) bundle management for Laravel CA",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "groupesti/laravel-ca": "^0.1",
+        "groupesti/laravel-ca-crt": "^0.1",
+        "groupesti/laravel-ca-key": "^0.1",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CA\\Pkcs12\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CA\\Pkcs12\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CA\\Pkcs12\\Pkcs12ServiceProvider"
+            ],
+            "aliases": {
+                "CaPkcs12": "CA\\Pkcs12\\Facades\\CaPkcs12"
+            }
+        }
+    }
+}
